@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { site } from "@/config/site.config";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
+import { SectionIcon } from "@/components/ui/iconMap";
 import { cn } from "@/lib/cn";
 
 export default function Technology() {
@@ -44,13 +45,13 @@ export default function Technology() {
                   >
                     <span
                       className={cn(
-                        "grid h-10 w-10 shrink-0 place-items-center rounded-full border text-sm font-semibold transition-colors duration-300",
+                        "grid h-12 w-12 shrink-0 place-items-center rounded-xl border transition-colors duration-300",
                         selected
-                          ? "border-sienna bg-sienna text-canvas"
-                          : "border-cork-shadow text-grey-brown"
+                          ? "border-sienna bg-sienna/15 text-sienna"
+                          : "border-cork-shadow text-muted"
                       )}
                     >
-                      {trend.tag}
+                      <SectionIcon name={trend.icon} className="h-6 w-6" />
                     </span>
                     <span className="flex flex-1 flex-col">
                       <span
@@ -61,7 +62,7 @@ export default function Technology() {
                       >
                         {trend.title}
                       </span>
-                      <span className="mt-0.5 text-[0.72rem] uppercase tracking-[0.14em] text-grey-brown">
+                      <span className="mt-1 text-[0.8rem] uppercase tracking-[0.12em] text-muted">
                         {trend.spec}
                       </span>
                     </span>
@@ -88,16 +89,21 @@ export default function Technology() {
                 transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
                 className="flex h-full flex-col"
               >
-                <span className="font-display text-[7rem] font-semibold leading-none text-cork-shadow/70">
-                  {current.tag}
+                <SectionIcon
+                  name={current.icon}
+                  className="pointer-events-none absolute -right-4 -top-2 h-44 w-44 text-cork-shadow/50"
+                  strokeWidth={1}
+                />
+                <span className="text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-sienna">
+                  {current.tag} / 04
                 </span>
-                <h3 className="mt-2 text-2xl font-semibold tracking-tight text-cream md:text-3xl">
+                <h3 className="mt-3 text-2xl font-semibold tracking-tight text-cream md:text-3xl">
                   {current.title}
                 </h3>
-                <p className="mt-5 max-w-md text-[0.98rem] leading-relaxed text-cream/70">
+                <p className="mt-5 max-w-md text-[1.02rem] leading-relaxed text-cream/80">
                   {current.body}
                 </p>
-                <span className="mt-auto inline-flex w-fit items-center gap-2 rounded-pill border border-sienna/50 px-4 py-2 text-[0.72rem] uppercase tracking-[0.16em] text-cream/80">
+                <span className="mt-auto inline-flex w-fit items-center gap-2 rounded-pill border border-sienna/50 px-4 py-2 text-[0.78rem] font-medium uppercase tracking-[0.12em] text-cream/90">
                   <span className="h-1.5 w-1.5 rounded-full bg-sienna" />
                   {current.spec}
                 </span>

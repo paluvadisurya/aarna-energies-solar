@@ -12,7 +12,7 @@ import { Check, WhatsAppIcon, ArrowRight } from "@/components/ui/Icons";
 export default function Pricing() {
   const { pricing } = site;
   const plan = pricing.plan;
-  const waMsg = `Hi Aarna Energies 👋 I'm interested in the ${plan.name} (${plan.price}). Please share a quote and book a site survey.`;
+  const waMsg = `Hi Aarna Energies, I am interested in the ${plan.name} (${plan.price}). Please share a quote and book a site visit.`;
 
   return (
     <section id="pricing" className="relative overflow-hidden py-24 md:py-32">
@@ -30,16 +30,18 @@ export default function Pricing() {
           <div className="mt-14 grid overflow-hidden rounded-card border border-cork-shadow/70 lg:grid-cols-[1.4fr_1fr]">
             {/* plan */}
             <div className="relative bg-gradient-to-br from-[#160d06] to-canvas p-8 md:p-12">
-              <span className="absolute right-8 top-8 rounded-pill border border-sienna/50 px-3 py-1 text-[0.62rem] uppercase tracking-[0.16em] text-sienna">
-                Most Popular
-              </span>
-              <p className="text-[0.82rem] uppercase tracking-[0.16em] text-grey-brown">
-                {plan.name}
-              </p>
-              <div className="mt-4 flex items-end gap-3">
+              <div className="flex items-start justify-between gap-4">
+                <p className="max-w-[60%] text-[0.85rem] uppercase tracking-[0.14em] text-muted">
+                  {plan.name}
+                </p>
+                <span className="shrink-0 rounded-pill border border-sienna/50 px-3 py-1 text-[0.68rem] font-medium uppercase tracking-[0.12em] text-sienna">
+                  Most Popular
+                </span>
+              </div>
+              <div className="mt-5 flex items-end gap-3">
                 <span className="t-display text-cream">{plan.price}</span>
               </div>
-              <p className="mt-1 text-[0.85rem] text-grey-brown">{plan.priceNote}</p>
+              <p className="mt-1.5 text-[0.9rem] text-muted">{plan.priceNote}</p>
               <p className="mt-5 max-w-sm text-[1.02rem] font-medium text-cream/90">
                 {plan.tagline}
               </p>

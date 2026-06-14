@@ -6,6 +6,7 @@ import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
 import Reveal from "@/components/ui/Reveal";
 import { SunMark } from "@/components/ui/Icons";
+import { SectionIcon } from "@/components/ui/iconMap";
 
 export default function SystemSpecs() {
   const { system } = site;
@@ -42,13 +43,15 @@ export default function SystemSpecs() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-3 rounded-pill border border-sienna/40 bg-canvas/50 px-5 py-3">
-              <span className="text-lg">🎁</span>
+            <div className="flex items-center gap-3.5 rounded-2xl border border-sienna/40 bg-canvas/50 px-5 py-4">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-sienna/15 text-sienna">
+                <SectionIcon name={system.freeGift.icon} className="h-5 w-5" />
+              </span>
               <div>
-                <p className="text-[0.66rem] uppercase tracking-[0.18em] text-sienna">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-sienna">
                   {system.freeGift.label}
                 </p>
-                <p className="text-[0.85rem] text-cream/85">{system.freeGift.text}</p>
+                <p className="mt-0.5 text-[0.95rem] text-cream/90">{system.freeGift.text}</p>
               </div>
             </div>
           </div>
@@ -75,8 +78,8 @@ export default function SystemSpecs() {
                     key={item.k}
                     className="flex justify-between gap-4 border-b border-cork-shadow/40 py-3.5 last:border-b-0"
                   >
-                    <dt className="text-[0.8rem] text-grey-brown">{item.k}</dt>
-                    <dd className="max-w-[60%] text-right text-[0.82rem] font-medium text-cream/85">
+                    <dt className="text-[0.9rem] text-muted">{item.k}</dt>
+                    <dd className="max-w-[58%] text-right text-[0.9rem] font-medium text-cream/90">
                       {item.v}
                     </dd>
                   </div>

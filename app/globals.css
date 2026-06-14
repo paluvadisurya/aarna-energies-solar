@@ -14,8 +14,9 @@
   --color-cork-shadow: #40372e;   /* dashed dividers / structural lines */
   --color-dark-cork: #382416;     /* the one filled surface (buttons/cards) */
   --color-sienna: #dc5000;        /* burnt-sienna hairline accent */
-  --color-grey-brown: #6c5f51;    /* muted secondary text */
-  --color-forest: #445231;        /* olive — eco / impact motif */
+  --color-grey-brown: #93826f;    /* muted secondary text (lightened for readability) */
+  --color-muted: #b9a994;         /* readable warm grey for labels on dark */
+  --color-forest: #7c9a4e;        /* olive green, eco / savings motif */
   --color-solar-amber: #e8801f;   /* the warm sun glow */
   --color-solar-gold: #f7b733;    /* highlight spark on the glow */
 
@@ -91,9 +92,9 @@ body {
   color: var(--color-cream);
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: var(--text-body);
-  line-height: 1.5;
-  letter-spacing: -0.01em;
+  font-size: 1rem; /* 16px base for easy reading */
+  line-height: 1.6;
+  letter-spacing: -0.005em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -117,11 +118,11 @@ body {
    TYPOGRAPHIC UTILITIES — fluid display scale
    ============================================================ */
 .t-eyebrow {
-  font-size: var(--text-caption);
-  letter-spacing: 0.32em;
+  font-size: 0.78rem; /* ~12.5px, readable */
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-weight: 500;
-  color: var(--color-grey-brown);
+  font-weight: 600;
+  color: var(--color-muted);
 }
 .t-display {
   font-weight: 500;
@@ -142,9 +143,9 @@ body {
   font-size: clamp(1.75rem, 3.6vw, 2.9rem);
 }
 .t-lede {
-  font-size: clamp(1.0625rem, 1.5vw, 1.35rem);
-  line-height: 1.5;
-  color: color-mix(in srgb, var(--color-cream) 82%, transparent);
+  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--color-cream) 88%, transparent);
 }
 
 /* ============================================================

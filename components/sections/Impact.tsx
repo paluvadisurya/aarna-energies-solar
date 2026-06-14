@@ -42,11 +42,9 @@ export default function Impact() {
             >
               <div className="flex items-baseline gap-1 text-5xl font-semibold tracking-tight text-cream md:text-6xl">
                 <Counter value={c.value} decimals={"decimals" in c ? (c.decimals as number) : 0} />
-                <span className="text-3xl text-forest md:text-4xl" style={{ color: "#7c9a4e" }}>
-                  {c.suffix}
-                </span>
+                <span className="text-3xl text-forest md:text-4xl">{c.suffix}</span>
               </div>
-              <p className="mt-3 max-w-[18ch] text-[0.82rem] uppercase leading-relaxed tracking-[0.12em] text-grey-brown">
+              <p className="mt-3.5 max-w-[20ch] text-[0.92rem] font-medium leading-snug text-muted">
                 {c.label}
               </p>
             </motion.div>
@@ -56,7 +54,7 @@ export default function Impact() {
         {/* quote */}
         <Reveal>
           <figure className="mt-16 flex flex-col items-start gap-6 md:flex-row md:items-center">
-            <Leaf className="h-10 w-10 shrink-0" style={{ color: "#7c9a4e" }} />
+            <Leaf className="h-10 w-10 shrink-0 text-forest" />
             <blockquote className="t-headline max-w-[24ch] text-cream/90">
               &ldquo;{impact.quote}&rdquo;
             </blockquote>

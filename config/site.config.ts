@@ -1,14 +1,15 @@
 /* =============================================================================
    AARNA ENERGIES — SITE CONTENT CONFIG
    -----------------------------------------------------------------------------
-   👋 This is the ONLY file most edits need to touch.
-   Everything visible on the website — headlines, copy, prices, phone numbers,
-   the WhatsApp number, specs, FAQs — lives here. Change a value, save, done.
+   This is the ONLY file most edits need to touch.
+   Everything visible on the website (text, prices, phone numbers, the WhatsApp
+   number, specs, FAQs) lives here. Change a value, save, and you are done.
 
    Tips for editing:
-   • Keep the quotes around text:  headline: "New text here",
-   • A line ending in a comma stays in the list.
-   • The WhatsApp number drives every "Chat on WhatsApp" button on the site.
+   - Keep the quotes around text:  headline: "New text here",
+   - A line ending in a comma stays in the list.
+   - The WhatsApp number drives every "Chat on WhatsApp" button on the site.
+   - "icon" values are names from a fixed set (see components/ui/iconMap.tsx).
    ============================================================================= */
 
 export const site = {
@@ -17,9 +18,12 @@ export const site = {
      --------------------------------------------------------------------------- */
   company: {
     name: "Aarna Energies",
+    fullName: "Aarna Energies",
     legalName: "Shree Aarna Energies LLP",
+    descriptor: "Rooftop Solar",
+    brandTagline: "Rooftop solar that lasts 25 years",
     gst: "37AFPFS4704M1ZC",
-    foundedNote: "Engineering-led rooftop solar EPC",
+    foundedNote: "Quality-first rooftop solar company",
     location: {
       city: "Vizianagaram",
       state: "Andhra Pradesh",
@@ -37,14 +41,14 @@ export const site = {
     // WhatsApp Business number in international format, no "+", no spaces:
     whatsapp: "918686883329",
     email: "sriaarnaenergies@gmail.com",
-    // Default message pre-filled when a visitor opens WhatsApp:
+    // Default message filled in when a visitor opens WhatsApp:
     whatsappDefaultMessage:
-      "Hi Aarna Energies 👋 I'd like a free rooftop solar consultation. Can you share details?",
+      "Hi Aarna Energies, I want a free rooftop solar quote for my home. Please share the details.",
     bank: {
       name: "Shree Aarna Energies LLP",
       accountNumber: "050111318180424",
       ifsc: "UBIN0805017",
-      upiHint: "Pay via PhonePe / UPI",
+      upiHint: "Pay easily with PhonePe or any UPI app",
     },
   },
 
@@ -53,18 +57,18 @@ export const site = {
      --------------------------------------------------------------------------- */
   meta: {
     url: "https://aarnaenergies.com",
-    tagline: "Rooftop Solar, Engineered to Last 25 Years",
+    tagline: "Rooftop Solar That Lasts 25 Years",
     description:
-      "Aarna Energies is a quality-led, engineering-driven rooftop solar EPC. We design and build TOPCon, hybrid-ready solar systems for lifetime performance — not lowest upfront price. Channel partner for SolarEdge & S R Portables.",
+      "Aarna Energies builds strong rooftop solar systems for homes. Good quality parts, careful fitting, full paperwork support and 25 years of savings. Trusted partner of SolarEdge and S R Portables.",
     keywords: [
       "rooftop solar",
-      "solar EPC",
+      "solar panels for home",
       "Aarna Energies",
       "TOPCon solar",
       "SolarEdge",
       "solar Vizianagaram",
       "Andhra Pradesh solar",
-      "on-grid solar",
+      "on grid solar",
       "hybrid solar",
       "solar installation India",
     ],
@@ -74,13 +78,13 @@ export const site = {
      4. NAVIGATION
      --------------------------------------------------------------------------- */
   nav: {
-    wordmark: "AARNA",
+    wordmark: "AARNA ENERGIES",
     links: [
-      { label: "Approach", href: "#approach" },
-      { label: "Technology", href: "#technology" },
+      { label: "What We Do", href: "#offer" },
+      { label: "Why Aarna", href: "#approach" },
       { label: "System", href: "#system" },
-      { label: "Impact", href: "#impact" },
-      { label: "Pricing", href: "#pricing" },
+      { label: "Savings", href: "#impact" },
+      { label: "Price", href: "#pricing" },
       { label: "Contact", href: "#contact" },
     ],
     cta: { label: "Chat on WhatsApp", href: "" }, // href is generated
@@ -90,21 +94,21 @@ export const site = {
      5. HERO
      --------------------------------------------------------------------------- */
   hero: {
-    eyebrow: "Shree Aarna Energies LLP · Rooftop Solar EPC",
+    eyebrow: "Aarna Energies · Rooftop Solar for Homes",
     // Headline is split into lines for the staggered reveal animation:
-    headline: ["HARNESS", "THE SUN."],
-    headlineAccent: "OWN YOUR POWER.",
-    lede: "We engineer rooftop solar as a 25-year infrastructure asset — TOPCon modules, smart electronics and hybrid-ready design, built for lifetime performance, not the lowest upfront price.",
-    primaryCta: "Get a Free Solar Estimate",
-    secondaryCta: "Explore the System",
-    secondaryHref: "#system",
-    scrollPrompt: "Scroll to continue",
-    // Rotating proof points shown beneath the hero:
+    headline: ["SOLAR POWER", "FOR YOUR HOME."],
+    headlineAccent: "SAVE FROM DAY ONE.",
+    lede: "Aarna Energies builds strong rooftop solar systems that keep working well for 25 years. Good quality parts, careful fitting and full support after the sale, so your power bill stays low for a long time.",
+    primaryCta: "Get a Free Quote",
+    secondaryCta: "See What We Do",
+    secondaryHref: "#offer",
+    scrollPrompt: "Scroll to see more",
+    // Short proof points shown beneath the hero:
     stats: [
-      { value: "25", suffix: "yr", label: "Performance-warranted design" },
-      { value: "5,000", suffix: "+", label: "Clean units / year (3 kW)" },
-      { value: "<1", suffix: "%", label: "Yr-1 power degradation" },
-      { value: "2", suffix: "", label: "Global tech partnerships" },
+      { value: "25", suffix: " yr", label: "Built to last" },
+      { value: "5,000", suffix: "+", label: "Free units a year" },
+      { value: "30", suffix: " yr", label: "Performance warranty" },
+      { value: "2", suffix: "", label: "Trusted brand partners" },
     ],
   },
 
@@ -112,355 +116,402 @@ export const site = {
      6. MARQUEE  — the scrolling band of keywords
      --------------------------------------------------------------------------- */
   marquee: [
-    "TOPCon N-Type",
-    "SolarEdge Optimizers",
-    "Hybrid-Ready",
-    "Net Metering",
-    "G12R High-Density",
-    "Hot-Dip Galvanised",
-    "25-Year Asset",
-    "Engineering-Led EPC",
+    "Rooftop Solar",
+    "Free Site Survey",
+    "Net Metering Help",
+    "25-Year Build",
+    "TOPCon Panels",
+    "SolarEdge Partner",
+    "Full Installation",
+    "After-Sales Care",
   ],
 
   /* ---------------------------------------------------------------------------
-     7. POSITIONING  — the core belief statement
+     7. WHAT WE DO  — clear list of services (NEW)
      --------------------------------------------------------------------------- */
-  positioning: {
-    eyebrow: "Our Belief",
-    statement:
-      "Solar is a 25-year infrastructure asset — not a short-term electrical purchase.",
-    body: "While the industry optimises for cost and speed, Aarna Energies is deliberately quality-led and technology-driven, focused on lifetime system performance. We treat EPC as an engineering discipline: site-specific design, a real electrical safety philosophy, structured commissioning, and long-term maintainability.",
-    signature: "— Vijay, Partner, Aarna Energies",
+  offer: {
+    eyebrow: "What We Do",
+    title: "Everything for your rooftop solar, in one place.",
+    intro:
+      "From the first visit to years of support, we take care of the whole job. One trusted team, one point of contact.",
+    services: [
+      {
+        icon: "survey",
+        title: "Free Site Survey & Design",
+        desc: "We visit your home, check your roof and sunlight, and design the right system for you.",
+      },
+      {
+        icon: "panel",
+        title: "Quality Solar Parts",
+        desc: "We supply trusted panels, inverters and a strong galvanised frame that lasts for years.",
+      },
+      {
+        icon: "install",
+        title: "Safe Installation",
+        desc: "Our trained team fits, wires and tests the full system with proper care and safety.",
+      },
+      {
+        icon: "document",
+        title: "Net Metering & Paperwork",
+        desc: "We handle the design report, testing and net metering, so you do not have to run around.",
+      },
+      {
+        icon: "monitor",
+        title: "Watch It On Your Phone",
+        desc: "See how much power your roof makes any time, right from a simple phone app.",
+      },
+      {
+        icon: "support",
+        title: "After-Sales Support",
+        desc: "We stay with you after the sale, with service help and a free panel cleaning kit.",
+      },
+    ],
   },
 
   /* ---------------------------------------------------------------------------
-     8. WHY AARNA  — three pillars
+     8. POSITIONING  — the core belief statement
+     --------------------------------------------------------------------------- */
+  positioning: {
+    eyebrow: "Our Promise",
+    statement:
+      "Solar is a 25-year asset for your home, not a quick electrical job.",
+    body: "Many companies rush to give the lowest price and finish fast. We do it differently. We focus on quality and good engineering, so your system keeps saving money for many years. We plan each system for your roof, fit it safely, test it fully, and stay with you for support.",
+    signature: "Vijay, Partner, Aarna Energies",
+  },
+
+  /* ---------------------------------------------------------------------------
+     9. WHY AARNA  — three pillars
      --------------------------------------------------------------------------- */
   why: {
     eyebrow: "Why Aarna",
-    title: "A new class of solar enterprise.",
+    title: "A new kind of solar company.",
     intro:
-      "Engineering-led, technology-trusted, and positioned to win as the industry shifts from cost-driven adoption to performance-driven maturity.",
+      "We lead with good engineering and trusted technology. As solar grows up, what matters most is how long your system lasts and how well it is looked after. That is exactly what we do best.",
     pillars: [
       {
         no: "01",
-        title: "Ahead of the Industry Curve",
-        body: "Most of the rooftop market competes on upfront cost and speed. We chose a quality-first, engineering-led strategy — built for the next phase of the industry where performance, safety, compliance and serviceability become decisive.",
+        title: "Ahead Of The Curve",
+        body: "Most companies sell on low price and speed. We chose quality and careful work, so your system runs well and stays safe for years to come.",
       },
       {
         no: "02",
-        title: "A Trusted Ecosystem Partner",
-        body: "Through disciplined execution and strong governance, Aarna has been selectively appointed as a distributor and channel partner for global and national leaders like SolarEdge and S R Portables — confidence in our ability to deploy advanced technology in demanding markets.",
+        title: "A Trusted Partner",
+        body: "Big names like SolarEdge and S R Portables have chosen Aarna as their partner. That shows real trust in our team and the way we work.",
       },
       {
         no: "03",
-        title: "Technology With Accountability",
-        body: "Our edge isn't access to technology alone — it's responsible deployment. Advanced module and system architectures aligned to Indian rooftop realities, with engineering discipline that converts product capability into bankable system performance.",
+        title: "Technology You Can Trust",
+        body: "We do not just buy good parts. We fit and set them up the right way, so you get the full benefit and real savings every month.",
       },
     ],
   },
 
   /* ---------------------------------------------------------------------------
-     9. TECHNOLOGY TRENDS  — what we deploy & why
+     10. TECHNOLOGY  — what we use & why
      --------------------------------------------------------------------------- */
   technology: {
-    eyebrow: "Technology With Engineering Intent",
-    title: "We deploy technology as system-level solutions — not labels.",
+    eyebrow: "The Technology We Use",
+    title: "Better parts, set up the right way.",
     trends: [
       {
-        tag: "A",
-        title: "N-Type TOPCon Modules",
-        body: "Moving beyond older PERC cells to N-type TOPCon — sourced for quality, degradation behaviour and real-world conditions. Higher efficiency, better temperature performance, longer-term output.",
-        spec: "Higher efficiency · lower degradation",
+        tag: "01",
+        icon: "panel",
+        title: "N-Type TOPCon Panels",
+        body: "Newer panels that make more power and last longer than older types. They also work better in the heat, so you get more savings.",
+        spec: "More power, longer life",
       },
       {
-        tag: "B",
-        title: "G12R High-Density Formats",
-        body: "Larger, rectangular wafer formats like G12R used to maximise rooftop yield — more watts per square metre and optimised balance-of-system, not just headline module wattage.",
-        spec: "More W/m² · better rooftop use",
+        tag: "02",
+        icon: "grid",
+        title: "High-Density Panels",
+        body: "Larger, smart-shaped panels that fit more power on your roof. You get more units from the same roof space.",
+        spec: "More power per square foot",
       },
       {
-        tag: "C",
-        title: "Smart & Distributed Electronics",
-        body: "Optimizer / MLPE-based systems deployed to solve shading, monitoring and service challenges — engineered solutions, never add-ons. Panel-level visibility and safer DC.",
-        spec: "Per-panel control · safer DC",
+        tag: "03",
+        icon: "chip",
+        title: "Smart Panel Electronics",
+        body: "Optimizers let each panel work on its own. You get better output when there is shade, plus easy checking of each panel.",
+        spec: "Works well even with shade",
       },
       {
-        tag: "D",
-        title: "Hybrid & Storage-Ready",
-        body: "Hybrid inverter architecture designed for reliability, backup and future battery expansion — built for grid unreliability, energy independence and future-proof investment.",
-        spec: "Backup-ready · battery-expandable",
+        tag: "04",
+        icon: "battery",
+        title: "Battery-Ready Design",
+        body: "A hybrid setup that gives backup power and can take a battery later. Your system is ready for the future.",
+        spec: "Backup now, battery later",
       },
     ],
   },
 
   /* ---------------------------------------------------------------------------
-     10. INVERTER COMPARISON  — interactive table
+     11. INVERTER COMPARISON  — interactive table
      --------------------------------------------------------------------------- */
   inverters: {
-    eyebrow: "Choose Your Architecture",
-    title: "String, Micro or Optimizer — engineered to your roof.",
-    note: "Quotation pricing is for a String inverter. SolarEdge Optimizer or Microinverter systems are available and finalised on discussion.",
+    eyebrow: "Pick Your Setup",
+    title: "String, Micro or Optimizer, chosen for your roof.",
+    note: "The quote price is for a String inverter. SolarEdge Optimizer or Micro setups are also available. We can choose the best one together on a call.",
     options: [
       {
         key: "string",
-        name: "String (Grid) Inverter",
-        glyph: "⚡",
-        principle: "One inverter for a series (string) of panels",
-        type: "Centralized",
+        name: "String Inverter",
+        icon: "bolt",
+        principle: "One inverter for a full row of panels",
+        type: "Central setup",
         cost: "Lowest",
-        bestFor: "Unshaded roofs seeking best value",
-        brands: "Polycab · Solis · Solex · Feaston · Dye",
+        bestFor: "Open roofs with no shade",
+        brands: "Polycab, Solis, Solex, Feaston, Dye",
       },
       {
         key: "micro",
         name: "Microinverter",
-        glyph: "🔌",
-        principle: "One inverter per panel",
-        type: "Fully distributed",
+        icon: "plug",
+        principle: "One small inverter on each panel",
+        type: "Spread out",
         cost: "Highest",
-        bestFor: "Complex roofs, maximum reliability",
-        brands: "Enphase · Dye · Feaston · Jio Sparq",
+        bestFor: "Tricky roofs, top reliability",
+        brands: "Enphase, Dye, Feaston, Jio Sparq",
       },
       {
         key: "optimizer",
         name: "Power Optimizer",
-        glyph: "🔋",
-        principle: "Optimizer per panel + central inverter",
-        type: "Hybrid control",
+        icon: "chip",
+        principle: "A smart unit on each panel plus a central inverter",
+        type: "Smart mix",
         cost: "Medium",
-        bestFor: "Shaded roofs wanting panel-level control",
-        brands: "SolarEdge Technologies",
+        bestFor: "Shaded roofs, panel-by-panel control",
+        brands: "SolarEdge",
       },
     ],
     // rows: each row rated per option — "high" | "mid" | "low"
     rows: [
-      { label: "Efficiency (ideal)", values: { string: "high", micro: "mid", optimizer: "high" } },
-      { label: "Performance in shading", values: { string: "low", micro: "high", optimizer: "high" } },
-      { label: "Panel-level monitoring", values: { string: "low", micro: "high", optimizer: "high" } },
-      { label: "Safety (DC voltage)", values: { string: "mid", micro: "high", optimizer: "high" } },
-      { label: "Installation simplicity", values: { string: "high", micro: "mid", optimizer: "mid" } },
-      { label: "Scalability", values: { string: "low", micro: "high", optimizer: "high" } },
-      { label: "System reliability", values: { string: "mid", micro: "high", optimizer: "high" } },
-      { label: "Initial cost", values: { string: "high", micro: "low", optimizer: "mid" } },
+      { label: "Power on a clear day", values: { string: "high", micro: "mid", optimizer: "high" } },
+      { label: "Works well in shade", values: { string: "low", micro: "high", optimizer: "high" } },
+      { label: "Check each panel", values: { string: "low", micro: "high", optimizer: "high" } },
+      { label: "Safety", values: { string: "mid", micro: "high", optimizer: "high" } },
+      { label: "Easy to install", values: { string: "high", micro: "mid", optimizer: "mid" } },
+      { label: "Easy to add more later", values: { string: "low", micro: "high", optimizer: "high" } },
+      { label: "How reliable", values: { string: "mid", micro: "high", optimizer: "high" } },
+      { label: "Starting cost", values: { string: "high", micro: "low", optimizer: "mid" } },
     ],
   },
 
   /* ---------------------------------------------------------------------------
-     11. SYSTEM SPECS  — the product / technical annexure
+     12. SYSTEM SPECS  — the product / technical details
      --------------------------------------------------------------------------- */
   system: {
     eyebrow: "The System",
-    title: "A 3 kW rooftop power plant, engineered end-to-end.",
+    title: "A 3 kW rooftop power plant, done fully.",
     intro:
-      "Every component is specified for a 25-year service life — bankable modules, protected DC, hot-dip galvanised structure and a documented earthing & safety system.",
+      "Every part is picked to last 25 years: trusted panels, safe wiring, a strong galvanised frame, and a full earthing and safety setup.",
     headline: {
       capacity: "3 kW",
-      capacityNote: "On-grid rooftop · scalable & hybrid-ready",
+      capacityNote: "On-grid rooftop · can grow · battery-ready",
     },
     specGroups: [
       {
-        title: "Solar PV Modules",
+        title: "Solar Panels",
         items: [
           { k: "Make", v: "Adani / Renewsys / Rayzon / Reliance" },
-          { k: "Technology", v: "Bifacial Glass-to-Glass TOPCon (DCR)" },
-          { k: "Wattage", v: "540 Wp × 6 panels" },
+          { k: "Type", v: "Bifacial Glass-to-Glass TOPCon (DCR)" },
+          { k: "Power", v: "540 Wp x 6 panels" },
           { k: "Product warranty", v: "8 years" },
-          { k: "Performance warranty", v: "30 years · <1% yr-1, <0.4%/yr after" },
-          { k: "Certifications", v: "IEC 61215 / 61730 / 61853 · BIS" },
+          { k: "Performance warranty", v: "30 years, under 1% loss in year 1" },
+          { k: "Certified", v: "IEC 61215 / 61730 / 61853 and BIS" },
         ],
       },
       {
         title: "Inverter",
         items: [
           { k: "Make", v: "Polycab / Feaston / Dye / SolarEdge" },
-          { k: "Rating", v: "3 kW · single phase" },
+          { k: "Rating", v: "3 kW, single phase" },
           { k: "Quantity", v: "1 unit" },
           { k: "Warranty", v: "8 years" },
-          { k: "Architecture", v: "String / Optimizer / Micro (on discussion)" },
-          { k: "Monitoring", v: "App-based ecosystem monitoring" },
+          { k: "Setup", v: "String / Optimizer / Micro (your choice)" },
+          { k: "Monitoring", v: "Simple phone app" },
         ],
       },
       {
-        title: "Structure & Balance of System",
+        title: "Frame & Safety",
         items: [
-          { k: "Mounting", v: "Hot-dip / pre-galvanised MMS, up to 600 mm" },
-          { k: "Leg height", v: "4–6 ft (finalised on site)" },
-          { k: "Protection", v: "ACDB (MCCB 32A + SPD) · DCDB" },
-          { k: "Earthing", v: "3 × Cu-bonded rods · backfill compound" },
-          { k: "Lightning", v: "Conventional lightning arrester" },
-          { k: "Cabling", v: "Polycab / Apar solar DC & AC cable" },
+          { k: "Frame", v: "Hot-dip galvanised, up to 600 mm" },
+          { k: "Leg height", v: "4 to 6 ft (set at your site)" },
+          { k: "Protection", v: "ACDB (MCCB 32A and SPD) and DCDB" },
+          { k: "Earthing", v: "3 copper-bonded rods with compound" },
+          { k: "Lightning", v: "Lightning arrester included" },
+          { k: "Cabling", v: "Polycab / Apar solar DC and AC cable" },
         ],
       },
     ],
     freeGift: {
-      label: "Included Free",
-      text: "Solar panel cleaning drip system + cleaning mop & wiper stick",
+      icon: "gift",
+      label: "Free With Your System",
+      text: "Solar panel cleaning kit: drip system, mop and wiper stick",
     },
   },
 
   /* ---------------------------------------------------------------------------
-     12. IMPACT  — environmental counters
+     13. IMPACT  — environmental counters
      --------------------------------------------------------------------------- */
   impact: {
-    eyebrow: "Hey Green Champ 🌱",
-    title: "Your roof becomes a mini power station.",
-    body: "Every sunny day, your system turns sunlight into clean energy — no smoke, no noise, no guilt. Just pure sunshine doing its thing for the next 25 years.",
+    eyebrow: "Good For The Planet",
+    title: "Your roof becomes a small power station.",
+    body: "On every sunny day, your roof turns sunlight into clean power. No smoke, no noise. Just steady savings and a cleaner planet for the next 25 years.",
     counters: [
-      { value: 5000, suffix: "+", label: "Clean units generated / year" },
-      { value: 800, suffix: "", label: "Trees-worth of CO₂ absorbed" },
-      { value: 4.5, suffix: "T", label: "CO₂ cut every year", decimals: 1 },
-      { value: 25, suffix: "yr", label: "Of greener, cheaper power" },
+      { value: 5000, suffix: "+", label: "Clean units made each year" },
+      { value: 800, suffix: "", label: "Trees worth of CO2 saved" },
+      { value: 4.5, suffix: "T", label: "CO2 cut every single year", decimals: 1 },
+      { value: 25, suffix: " yr", label: "Of cleaner, cheaper power" },
     ],
     quote:
-      "Switching to solar isn't just saving money — it's leaving a greener legacy for the next generation.",
+      "Going solar is not just about saving money. It is about leaving a cleaner world for our children.",
   },
 
   /* ---------------------------------------------------------------------------
-     13. SCOPE OF WORK  — who does what
+     14. SCOPE OF WORK  — who does what
      --------------------------------------------------------------------------- */
   scope: {
-    eyebrow: "Scope of Work",
-    title: "Clear ownership, start to commissioning.",
+    eyebrow: "Who Does What",
+    title: "Clear roles, from start to finish.",
     intro:
-      "We treat execution as a discipline. Here's exactly what Aarna delivers and what stays with you — no surprises.",
+      "We believe in doing the job right. Here is exactly what Aarna takes care of, and the few things we need from you.",
     aarna: [
-      "Detailed design engineering",
-      "Supply of all components per the DPR",
-      "Civil works for structures (up to grouting)",
+      "Full system design",
+      "Supply of all solar parts",
+      "Civil work for the frame (up to grouting)",
       "Installation of the solar system",
-      "Earthing on non-concrete flooring",
-      "Testing & commissioning, incl. net metering",
-      "Removal of debris from site",
-      "Warranty documentation",
+      "Earthing on non-concrete floors",
+      "Testing, switch-on and net metering",
+      "Cleaning up and removing waste",
+      "All warranty papers",
     ],
     client: [
-      "Name / category / phase change in electricity bill",
-      "Access to site",
-      "DPR approval & net-metering documents",
-      "Supply of fire extinguisher",
-      "Concrete cutting & repair for earthing",
-      "Internet (min 1 Mbps) at inverter location",
-      "Water pipeline to sprinkler / cleaning system",
-      "Downloading the monitoring ecosystem apps",
+      "Name or category change in the power bill",
+      "Access to your roof and site",
+      "Approval of the design report",
+      "A fire extinguisher",
+      "Concrete cutting and repair for earthing",
+      "Internet (at least 1 Mbps) near the inverter",
+      "Water line to the cleaning system",
+      "Installing the monitoring app",
     ],
   },
 
   /* ---------------------------------------------------------------------------
-     14. PRICING
+     15. PRICING
      --------------------------------------------------------------------------- */
   pricing: {
-    eyebrow: "Investment",
-    title: "One transparent price. A 25-year revenue engine.",
+    eyebrow: "Price",
+    title: "One clear price. Savings for 25 years.",
     plan: {
       name: "3 kW On-Grid Rooftop System",
       price: "₹1,85,000",
-      priceNote: "Complete system, including GST",
-      tagline: "A rooftop revenue engine, humming for 25 years.",
+      priceNote: "Full system, including GST",
+      tagline: "A money-saving machine on your roof for 25 years.",
       includes: [
         "3 kW Adani or reputed-make panels",
-        "Hot-dip galvanised mounting structure",
-        "SolarEdge / reputed on-grid string inverter",
-        "Complete BOS, earthing & safety system",
-        "Free panel-cleaning drip system + kit",
+        "Hot-dip galvanised mounting frame",
+        "SolarEdge or reputed on-grid inverter",
+        "Full wiring, earthing and safety setup",
+        "Free panel cleaning kit",
       ],
       upgradesNote:
-        "SolarEdge Optimizer or Microinverter architectures available — finalised on discussion.",
+        "Want SolarEdge Optimizer or Micro setup? That is also available. We will decide together on a call.",
     },
     payment: [
-      { stage: "On date of order", percent: "70%" },
-      { stage: "On installation date", percent: "30%" },
+      { stage: "When you place the order", percent: "70%" },
+      { stage: "On installation day", percent: "30%" },
     ],
-    cta: "Reserve Your Site Survey",
+    cta: "Book a Free Site Visit",
   },
 
   /* ---------------------------------------------------------------------------
-     15. PARTNERS
+     16. PARTNERS
      --------------------------------------------------------------------------- */
   partners: {
-    eyebrow: "Trusted To Represent",
-    title: "Channel partner for industry leaders.",
-    body: "Aarna has been selectively appointed to represent advanced technologies in demanding markets — a signal of confidence in our engineering and execution.",
+    eyebrow: "Trusted Partners",
+    title: "We work with top brands.",
+    body: "Leading companies have chosen Aarna to bring their technology to homes here. It is a clear sign of trust in how we work.",
     logos: [
-      { name: "SolarEdge", role: "Optimizer & monitoring partner" },
-      { name: "S R Portables", role: "Distribution & channel partner" },
-      { name: "Adani Solar", role: "Tier-1 module supply" },
-      { name: "Polycab", role: "Inverters & solar cable" },
+      { name: "SolarEdge", role: "Optimizer and monitoring partner" },
+      { name: "S R Portables", role: "Distribution and channel partner" },
+      { name: "Adani Solar", role: "Top-grade panel supply" },
+      { name: "Polycab", role: "Inverters and solar cable" },
     ],
   },
 
   /* ---------------------------------------------------------------------------
-     16. FAQ
+     17. FAQ
      --------------------------------------------------------------------------- */
   faq: {
-    eyebrow: "Good Questions",
-    title: "Everything you wanted to ask.",
+    eyebrow: "Common Questions",
+    title: "Everything you want to ask.",
     items: [
       {
         q: "How much does a rooftop system cost?",
-        a: "Our 3 kW on-grid system is ₹1,85,000 including GST, complete with panels, hot-dip galvanised structure, inverter, full balance-of-system and a free cleaning kit. Larger and hybrid systems are quoted after a site survey.",
+        a: "Our 3 kW on-grid system is ₹1,85,000 including GST. This covers panels, the galvanised frame, the inverter, full wiring and a free cleaning kit. Bigger systems are quoted after a free site visit.",
       },
       {
-        q: "What's the payment schedule?",
-        a: "70% on the date of order and 30% on the installation date. Bank and UPI details are shared on the proposal and during your WhatsApp chat.",
+        q: "How do I pay?",
+        a: "You pay 70% when you place the order and 30% on installation day. Bank and UPI details are shared on your quote and on WhatsApp.",
       },
       {
         q: "Which inverter should I choose?",
-        a: "String inverters offer the best value on unshaded roofs. For shaded or complex roofs we recommend SolarEdge Optimizers or microinverters for panel-level monitoring and better shade performance. We'll advise based on your roof.",
+        a: "String inverters give the best value on open roofs with no shade. For shaded or tricky roofs we suggest SolarEdge Optimizers or microinverters, so each panel is checked and works on its own. We will guide you based on your roof.",
       },
       {
-        q: "How long does the system last?",
-        a: "Modules carry an 8-year product warranty and a 30-year performance warranty (degradation under 1% in year one). We engineer the whole system as a 25-year asset.",
+        q: "How long will the system last?",
+        a: "Panels carry an 8-year product warranty and a 30-year performance warranty, with under 1% power loss in the first year. We build the whole system to last 25 years.",
       },
       {
-        q: "Do you handle net metering and subsidy paperwork?",
-        a: "Yes — we handle design, DPR, testing, commissioning and net metering. You provide site access and the documents required for net-metering and subsidy applications.",
+        q: "Do you handle net metering and subsidy papers?",
+        a: "Yes. We take care of the design, the report, testing, switch-on and net metering. You only provide site access and the documents needed for net metering and subsidy.",
       },
       {
-        q: "What areas do you serve?",
-        a: "We're based in Vizianagaram, Andhra Pradesh and serve rooftop solar projects across the region. Message us on WhatsApp to confirm coverage for your location.",
+        q: "Which areas do you cover?",
+        a: "We are based in Vizianagaram, Andhra Pradesh and work across the region. Message us on WhatsApp to confirm we cover your area.",
       },
     ],
   },
 
   /* ---------------------------------------------------------------------------
-     17. CONTACT / FINAL CTA
+     18. CONTACT / FINAL CTA
      --------------------------------------------------------------------------- */
   contact_section: {
-    eyebrow: "Let's Talk",
-    title: "Ready to turn your roof into a power plant?",
-    body: "Send one message on WhatsApp. We'll review your roof, recommend the right architecture and share a transparent quote — no pressure, no jargon.",
+    eyebrow: "Talk To Us",
+    title: "Ready to lower your power bill?",
+    body: "Send us one message on WhatsApp. We will look at your roof, suggest the best setup and share a clear price. No pressure, and no hard-to-understand words.",
     primaryCta: "Chat on WhatsApp",
     points: [
-      "Free roof assessment & savings estimate",
-      "Transparent, all-inclusive pricing",
-      "Engineering-led design & lifetime support",
+      "Free roof check and savings estimate",
+      "One clear, all-in price",
+      "Careful work and long-term support",
     ],
   },
 
   /* ---------------------------------------------------------------------------
-     18. FOOTER
+     19. FOOTER
      --------------------------------------------------------------------------- */
   footer: {
     blurb:
-      "Engineering-led rooftop solar. We build 25-year energy assets, not short-term electrical purchases.",
-    closingLine: "Powered by good choices and pure sunshine.",
+      "Quality-first rooftop solar. We build 25-year power systems for your home, not quick electrical jobs.",
+    closingLine: "Powered by good choices and bright sunshine.",
     columns: [
       {
         title: "Explore",
         links: [
-          { label: "Our Approach", href: "#approach" },
-          { label: "Technology", href: "#technology" },
+          { label: "What We Do", href: "#offer" },
+          { label: "Why Aarna", href: "#approach" },
           { label: "The System", href: "#system" },
-          { label: "Pricing", href: "#pricing" },
+          { label: "Price", href: "#pricing" },
         ],
       },
       {
         title: "Company",
         links: [
-          { label: "Why Aarna", href: "#approach" },
-          { label: "Environmental Impact", href: "#impact" },
-          { label: "Scope of Work", href: "#scope" },
+          { label: "The Technology", href: "#technology" },
+          { label: "Your Savings", href: "#impact" },
+          { label: "Who Does What", href: "#scope" },
           { label: "FAQ", href: "#faq" },
         ],
       },

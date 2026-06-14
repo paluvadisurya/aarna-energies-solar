@@ -2,25 +2,30 @@
   "name": "aarna-energies",
   "version": "1.0.0",
   "private": true,
-  "description": "Official website for Aarna Energies — engineering-led rooftop solar EPC.",
+  "description": "Official website for Aarna Energies, a quality-first rooftop solar company.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "icons": "node scripts/gen-icons.mjs",
+    "shots": "node scripts/screenshots.mjs"
   },
   "dependencies": {
+    "lenis": "latest",
+    "lucide-react": "^1.18.0",
+    "motion": "latest",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "motion": "latest",
-    "lenis": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "latest",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "puppeteer-core": "^25.1.0",
+    "sharp": "^0.35.1",
     "tailwindcss": "latest",
     "typescript": "latest"
   }

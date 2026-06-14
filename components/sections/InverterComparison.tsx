@@ -3,8 +3,10 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { site } from "@/config/site.config";
+import { Info } from "lucide-react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import RevealText from "@/components/ui/RevealText";
+import { SectionIcon } from "@/components/ui/iconMap";
 import { cn } from "@/lib/cn";
 
 type Rating = "high" | "mid" | "low";
@@ -70,7 +72,14 @@ export default function InverterComparison() {
                     className="absolute left-0 top-0 h-px w-full bg-sienna"
                   />
                 )}
-                <span className="text-2xl">{opt.glyph}</span>
+                <span
+                  className={cn(
+                    "grid h-11 w-11 place-items-center rounded-xl border transition-colors duration-300",
+                    i === active ? "border-sienna/60 bg-sienna/15 text-sienna" : "border-cork-shadow text-muted"
+                  )}
+                >
+                  <SectionIcon name={opt.icon} className="h-5 w-5" />
+                </span>
                 <h3
                   className={cn(
                     "mt-3 text-lg font-semibold tracking-tight transition-colors",
@@ -79,9 +88,9 @@ export default function InverterComparison() {
                 >
                   {opt.name}
                 </h3>
-                <p className="mt-1 text-[0.78rem] leading-snug text-grey-brown">{opt.principle}</p>
+                <p className="mt-1.5 text-[0.85rem] leading-snug text-muted">{opt.principle}</p>
                 {i === active && (
-                  <span className="mt-3 inline-block rounded-pill border border-sienna/50 px-3 py-1 text-[0.62rem] uppercase tracking-[0.16em] text-cream/80">
+                  <span className="mt-3 inline-block rounded-pill border border-sienna/50 px-3 py-1 text-[0.7rem] font-medium uppercase tracking-[0.12em] text-cream/90">
                     {opt.bestFor}
                   </span>
                 )}
@@ -96,7 +105,7 @@ export default function InverterComparison() {
                 key={row.label}
                 className="grid grid-cols-[1.1fr_repeat(3,1fr)] border-t border-cork-shadow/50"
               >
-                <div className="bg-[#0d0703] px-7 py-5 text-[0.82rem] font-medium uppercase tracking-[0.1em] text-grey-brown">
+                <div className="bg-[#0d0703] px-7 py-5 text-[0.88rem] font-medium uppercase tracking-[0.08em] text-muted">
                   {row.label}
                 </div>
                 {options.map((opt, i) => (
@@ -114,15 +123,15 @@ export default function InverterComparison() {
             ))}
             {/* brands row */}
             <div className="grid grid-cols-[1.1fr_repeat(3,1fr)] border-t border-cork-shadow/50">
-              <div className="bg-[#0d0703] px-7 py-5 text-[0.82rem] font-medium uppercase tracking-[0.1em] text-grey-brown">
+              <div className="bg-[#0d0703] px-7 py-5 text-[0.88rem] font-medium uppercase tracking-[0.08em] text-muted">
                 Typical Brands
               </div>
               {options.map((opt, i) => (
                 <div
                   key={opt.key}
                   className={cn(
-                    "border-l border-cork-shadow/60 px-7 py-5 text-[0.8rem] leading-relaxed transition-colors duration-300",
-                    i === active ? "bg-[#160d06] text-cream/80" : "bg-canvas text-cream/55"
+                    "border-l border-cork-shadow/60 px-7 py-5 text-[0.86rem] leading-relaxed transition-colors duration-300",
+                    i === active ? "bg-[#160d06] text-cream/85" : "bg-canvas text-cream/60"
                   )}
                 >
                   {opt.brands}
@@ -147,7 +156,7 @@ export default function InverterComparison() {
                     : "border-cork-shadow text-cream/60"
                 )}
               >
-                <span>{opt.glyph}</span>
+                <SectionIcon name={opt.icon} className="h-4 w-4" />
                 {opt.name}
               </button>
             ))}
@@ -183,8 +192,9 @@ export default function InverterComparison() {
           </motion.div>
         </div>
 
-        <p className="mt-8 max-w-2xl text-[0.82rem] leading-relaxed text-grey-brown">
-          <span className="text-sienna">✦</span> {inverters.note}
+        <p className="mt-8 flex max-w-2xl items-start gap-2.5 text-[0.92rem] leading-relaxed text-muted">
+          <Info className="mt-0.5 h-4 w-4 shrink-0 text-sienna" />
+          <span>{inverters.note}</span>
         </p>
       </div>
     </section>

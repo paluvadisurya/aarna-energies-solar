@@ -5,6 +5,7 @@ import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
 import Nav from "@/components/sections/Nav";
 import Hero from "@/components/sections/Hero";
 import Marquee from "@/components/sections/Marquee";
+import WhatWeDo from "@/components/sections/WhatWeDo";
 import Positioning from "@/components/sections/Positioning";
 import WhyAarna from "@/components/sections/WhyAarna";
 import Technology from "@/components/sections/Technology";
@@ -64,6 +65,7 @@ export default function Home() {
       <main>
         <Hero />
         <Marquee />
+        <WhatWeDo />
         <Positioning />
         <WhyAarna />
         <Technology />

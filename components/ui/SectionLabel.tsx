@@ -8,7 +8,7 @@ export default function SectionLabel({ children }: { children: string }) {
     <Reveal>
       <span className="inline-flex items-center gap-3">
         <span className="h-px w-7 bg-sienna" />
-        <span className="t-eyebrow text-grey-brown">{children}</span>
+        <span className="t-eyebrow">{children}</span>
       </span>
     </Reveal>
   );

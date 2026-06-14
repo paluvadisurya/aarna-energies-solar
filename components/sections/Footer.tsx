@@ -8,7 +8,16 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-cork-shadow/70 bg-canvas-deep">
+    <footer className="relative overflow-hidden border-t border-cork-shadow/70 bg-canvas-deep">
+      {/* big brand moment */}
+      <div className="section-x relative border-b border-cork-shadow/50 pt-16 pb-10">
+        <p className="t-eyebrow text-sienna">{company.brandTagline}</p>
+        <h2 className="mt-4 font-display text-[15vw] font-bold leading-[0.85] tracking-tight text-cream/95 sm:text-[12vw] lg:text-[11rem]">
+          AARNA
+          <span className="block font-light text-cream/35">ENERGIES</span>
+        </h2>
+      </div>
+
       <div className="section-x py-16 md:py-20">
         <div className="grid gap-12 md:grid-cols-12">
           {/* brand */}
